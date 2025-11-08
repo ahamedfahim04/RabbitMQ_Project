@@ -1,0 +1,15 @@
+{
+  "name": "flight-booking-app",
+  "private": true,
+  "workspaces": [
+    "booking-service",
+    "payment-service",
+    "notification-service"
+  ],
+  "scripts": {
+    "start:all": "concurrently \"npm run start:dev -w booking-service\" \"npm run start:dev -w payment-service\" \"npm run start:dev -w notification-service\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
